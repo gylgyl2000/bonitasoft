@@ -7,8 +7,16 @@ html, body {
   background-image: url("../landing_page_files/email-white.svg");
 }
 
+#main-navbar .nav.navbar-nav > li > a[href*="/contactenos"]:hover::before, #main-navbar .nav.navbar-nav > li > a[href*="/nous-contacter"]:hover::before, #main-navbar .nav.navbar-nav > li > a[href*="/contact"]:hover::before {
+  background-image: url("../landing_page_files/email-blue.svg");
+}
+
 #main-navbar .nav.navbar-nav > li > a[href*="/telechargez"]::before {
   background-image: url("../landing_page_files/download-white.svg");
+}
+
+#main-navbar .nav.navbar-nav > li > a[href*="/descargas"]:hover::before, #main-navbar .nav.navbar-nav > li > a[href*="/telechargez"]:hover::before, #main-navbar .nav.navbar-nav > li > a[href*="/downloads"]:hover::before {
+  background-image: url("../landing_page_files/download-red.svg");
 }
 
 #header .navbar-default .lg-container .region-navigation #menu-left {
