@@ -1,0 +1,17 @@
+/* Custom css here */
+html, body {
+  font-family: sans-serif;
+}
+
+#main-navbar .nav.navbar-nav > li > a[href*="/nous-contacter"]::before {
+  background-image: url("../landing_page_files/email-white.svg");
+}
+
+#main-navbar .nav.navbar-nav > li > a[href*="/telechargez"]::before {
+  background-image: url("../landing_page_files/download-white.svg");
+}
+
+#header .navbar-default .lg-container .region-navigation #menu-left {
+  display: table;
+  width: auto;
+}

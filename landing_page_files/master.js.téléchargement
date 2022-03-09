@@ -1,0 +1,100 @@
+jQuery(function($) {
+	jQuery('body').addClass('js_active');
+    //NEW DRUPAL 8
+    jQuery('#events-locations').change(function() { 
+        // set the window's location property to the value of the option the user has selected
+        window.location = jQuery(this).val();
+    });
+
+	//Event coming up
+	jQuery('.btn-interested').click(function() {
+		jQuery('.Popup-interested').addClass('open');
+	});
+	jQuery('.Popup-interestedClose').click(function() {
+		jQuery('.Popup-interested').removeClass('open');
+	});
+
+	//Bloc Event Header
+	if (jQuery('.Event-home').length) {
+		if(value_or_null = (document.cookie.match(/^(?:.*;)?\s*event_bloc\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1]) {
+			jQuery(".Event-home").remove();	
+		}else{
+			jQuery("body").addClass("event-isset");
+			jQuery(".Event-home").addClass('on'); 
+			jQuery(".Event-homeClose").click(function() {
+				jQuery(".Event-home").remove(); 
+				document.cookie = "event_bloc=false;domain=." + 
+				location.hostname.split(".").reverse()[1] + "." + 
+				location.hostname.split(".").reverse()[0] + ";path=/;";
+				jQuery("body").removeClass("event-isset");
+				return false;
+			});
+		}
+	}
+
+	if (window.matchMedia("(min-width: 769px)").matches) {
+		jQuery( document ).ready(function() {
+		  jQuery('.bonitasoft_image').css('display','none');
+		  var video = document.getElementsByTagName("video")[0];
+		  if(typeof(video) != "undefined" && video !== null) {
+		  	video.play();
+		  }
+		});
+	  }else {
+		jQuery('.bonitasoft_video').css('display','none');
+	  }
+
+	//Old versions download
+	if (jQuery('.old-downloads').length) {
+		jQuery('#table1').DataTable( {
+			"ordering": false
+		});
+		jQuery('#table2').DataTable( {
+			"ordering": false
+		});
+		}
+});
+
+
+document.addEventListener('cookiesjsrUserConsent', function (event) {
+	var service = (typeof event.detail.services === 'object') ? event.detail.services : {};
+	//console.log(service);
+	// In group tracking
+	if (typeof service['hotjar'] !== 'undefined' && service['hotjar']) {
+	  // Manipulate DOM to reanimate your third-party integration.
+	  //alert('Reanimate tracking cookies');
+	// Default analytics_storage to 'denied'.
+	  gtag('consent', 'update', { 
+		analytics_storage: 'granted'
+	  });
+	  jQuery('body').addClass('cookies_analytics_storage');
+	}
+
+	if (typeof service['facebook_pixel'] !== 'undefined' && service['facebook_pixel']) {
+		// Manipulate DOM to reanimate your third-party integration.
+		//alert('Reanimate tracking cookies');
+	  // Default analytics_storage to 'denied'.
+		gtag('consent', 'update', { 
+		  ad_storage: "granted"
+		});
+		jQuery('body').addClass('cookies_ad_storage');
+	  }
+  });
+
+  function Readmore(num) {
+    var dots = document.getElementById("dots"+num);
+    var moreText = document.getElementById("more"+num);
+    var btnText = document.getElementById("myBtn"+num);
+
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      //btnText.innerHTML = "Read more";
+      moreText.style.display = "none";
+          moreText.parentNode.classList.remove("active");
+    } else {
+      dots.style.display = "none";
+      //btnText.innerHTML = "Read less";
+      moreText.style.display = "block";
+          moreText.parentNode.classList.add("active");
+    }
+}

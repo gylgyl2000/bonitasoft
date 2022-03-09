@@ -1,0 +1,68 @@
+jQuery(function($) {
+
+    /**
+     * Scroll to defined anchor on the page
+     * @param {string} target
+     * @param {int} offset
+     */
+    //  function scroll2anchor(target, offset) {
+    //      var scrollLength = 0;
+     //
+    //      //When an admin is connected
+    //      if (jQuery('#toolbar').length > 0) {
+    //          //The name of the target is in the href (morever it's the id selector in query
+    //          scrollLength = jQuery(target).offset().top - (200 + offset);
+    //          // var scrollLength = $('#header .navbar').height() + $('#toolbar').height() + 30;
+    //      }
+    //      //For a connected user
+    //      else {
+    //          //The name of the target is in the href (morever it's the id selector in query
+    //          scrollLength = jQuery(target).offset().top - (135 + offset);
+    //         // var scrollLength = $('#header .navbar').height() + 30;
+    //      }
+     //
+    //       // console.log(scrollLength);
+     //
+    //      jQuery('html, body').animate({
+    //          scrollTop: scrollLength // header height
+    //      }, 300);
+    //  }
+
+    $( document ).ready(function() {
+         /**
+         * Check a href for an anchor. If exists, and in document, scroll to it.
+         * If href argument ommited, assumes context (this) is HTML Element,
+         * which will be the case when invoked by jQuery after an event
+         * https://jsfiddle.net/ianclark001/aShQL/         
+         */
+        function scroll_if_anchor(href) {
+            
+            if (typeof(href)!="string"){
+                href = href.currentTarget.hash;
+            }
+            var fromTop = 85;
+            if ($('#toolbar').length > 0) {//For a connected user
+                var fromTop = $('#header .navbar').height() + $('#toolbar').height();
+            }
+            else {
+                var fromTop = $('#header .navbar').height();
+            }
+            // If our Href points to a valid, non-empty anchor, and is on the same page (e.g. #foo)
+            // Legacy jQuery and IE7 may have issues: http://stackoverflow.com/q/1593174
+            if(href.indexOf("#") == 0) {
+                var $target = $(href);
+                if($target.length) {
+                    $('html, body').animate({ scrollTop: $target.offset().top - fromTop });
+                }
+            }
+        }
+
+        // When our page loads, check to see if it contains and anchor
+        scroll_if_anchor(window.location.hash);
+
+        // Intercept all anchor clicks
+        $("body").on("click", "a[href*='#']", scroll_if_anchor);
+        
+    });
+
+});
