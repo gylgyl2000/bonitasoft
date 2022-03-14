@@ -1,2 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+a:hover {
+  text-decoration: none;
+}
+
+#header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-height: 0px;
+}
+@media screen and (min-width: 1070px) {
+  #header .navbar-default .lg-container .region-navigation .container-menu-left {
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 190px);
+  }
+  #header .navbar-default .lg-container .region-navigation #menu-left {
+    display: table;
+    width: auto;
+  }
+}
+
+@media (min-width: 1070px) {
+  div[role=main].region.region-content {
+    margin-top: 71px;
+  }
+}
+
+#main-navbar .nav.navbar-nav > li > a[href*="/nous-contacter"]:before {
+  background-image: url("../landing_page_files/email-white.svg");
+}
+#main-navbar .nav.navbar-nav > li > a[href*="/nous-contacter"]:hover:before {
+  background-image: url("../landing_page_files/email-blue.svg");
+}
+#main-navbar .nav.navbar-nav > li > a[href*="/telechargez"]:before {
+  background-image: url("../landing_page_files/download-white.svg");
+}
+#main-navbar .nav.navbar-nav > li > a[href*="/telechargez"]:hover:before {
+  background-image: url("../landing_page_files/download-red.svg");
+}
+
+.region-content .col-sm-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.region-content .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.LandingDownload-header h1 {
+  font-weight: 600;
+}
+
+.LandingDownload-video {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.LandingDownload-videoAfter {
+  text-align: right;
+}
+
+.LandingDownload-blocContainer h2 {
+  font-weight: 600;
+  max-width: 80%;
+  padding-left: 20px;
+}
+
+.LandingDownload-blocwhite-first .LandingDownload-button {
+  background-color: #E31836;
+  color: #fff;
+}
+.LandingDownload-blocwhite-first .LandingDownload-button:hover {
+  background-color: #fff;
+  color: #E31836;
+}
+
+.LandingDownload-blocblue-first .LandingDownload-button {
+  background-color: #fff;
+  color: #E31836;
+}
+.LandingDownload-blocblue-first .LandingDownload-button:hover {
+  background-color: #E31836;
+  color: #fff;
+}
+
+.LandingDownload-blocContainer {
+  padding: 50px 0;
+}
+
+.LandingDownload-blocContainer-first {
+  padding-top: 257px;
+  padding-left: 20px;
+}
+
+.LandingDownload-trans {
+  float: right;
+  width: 220px;
+  margin-top: -22vh;
+}
+@media (max-width: 1200px) {
+  .LandingDownload-trans {
+    display: none;
+  }
+}
+
+.LandingDownload-schema {
+  top: calc(100% - 160px);
+  right: 2vw;
+}
+@media (min-width: 1500px) {
+  .LandingDownload-schema {
+    width: 300px !important;
+    height: auto !important;
+  }
+}
+
+.LandingDownload-list {
+  padding-top: 4vh;
+}
+
+.LandingDownload-list li:before {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #E31836;
+}
+
+.LandingDownload-blocwhite-second .LandingDownload-blocContainer {
+  padding: 40px 0 100px 0;
+}
+
+@media (min-width: 1070px) {
+  .LandingDownload-listLeader {
+    justify-content: left;
+  }
+}
+.LandingDownload-listLeader img {
+  width: 100%;
+}
+
+.LandingDownload-listLeader li {
+  width: 255px;
+  margin: 30px 20px;
+  padding-bottom: 90px;
+}
+
+.LandingDownload-listLeader-button {
+  color: black;
+  font-weight: normal;
+}
+
+.LandingDownload-blocContainer-blocblue-second {
+  width: calc(100vw - 100px) !important;
+  max-width: none;
+  z-index: 5;
+}
+.LandingDownload-blocContainer-blocblue-second .LandingDownload-blocContainer-flexImage {
+  width: 25%;
+  max-width: 100%;
+  margin-right: 35px;
+  margin-left: 0;
+}
+.LandingDownload-blocContainer-blocblue-second .LandingDownload-blocContainer-flexImage img {
+  width: 100%;
+  max-width: 100%;
+}
+.LandingDownload-blocContainer-blocblue-second .LandingDownload-blocContainer-flexText {
+  margin-right: 0;
+  max-width: 1000px;
+}
+.LandingDownload-blocContainer-blocblue-second .LandingDownload-blocContainer-flexText h2 {
+  margin-left: 110px;
+}
+.LandingDownload-blocContainer-blocblue-second .LandingDownload-blocContainer-flexText .LandingDownload-blocContainerColumns img {
+  width: 70px;
+  height: 70px;
+}
+.LandingDownload-blocContainer-blocblue-second .LandingDownload-blocContainer-flexText .LandingDownload-blocContainerColumns ul {
+  padding-left: 0;
+  padding-top: 0vh;
+  font-size: 20px;
+  margin-left: 2em;
+}
+.LandingDownload-blocContainer-blocblue-second .LandingDownload-blocContainer-flexText .LandingDownload-blocContainerColumns ul li::before {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #E31836;
+  margin: 0 1em 0 -2em;
+}
+.LandingDownload-blocContainer-blocblue-second .LandingDownload-blocContainer-flexText .LandingDownload-buttons {
+  padding-left: 6vw;
+}
+
+.LandingDownload-blocwhite-third .LandingDownload-schema-2 {
+  top: -372px;
+  right: 1vw;
+  position: absolute;
+  width: 300px !important;
+  max-width: 100%;
+  height: auto !important;
+}
+@media (max-width: 1200px) {
+  .LandingDownload-blocwhite-third .LandingDownload-schema-2 {
+    display: none;
+  }
+}
+.LandingDownload-blocwhite-third h2 {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 80px;
+  padding-left: 8vw;
+  padding-right: 8vw;
+}
+.LandingDownload-blocwhite-third h2 img {
+  flex-grow: 0;
+  width: 200px;
+}
+.LandingDownload-blocwhite-third .LandingDownload-blocContainer {
+  max-width: 1920px;
+  margin-bottom: 8vh;
+}
+.LandingDownload-blocwhite-third .LandingDownload-blocContainer ul {
+  padding-bottom: 8vh;
+}
+.LandingDownload-blocwhite-third .LandingDownload-blocContainer ul li {
+  margin-bottom: 8vh;
+  padding-top: 75px;
+  width: calc(100% / 3 - 40px);
+  margin: 10px;
+  padding-bottom: 25px;
+  min-height: 235px;
+  max-width: 450px;
+}
+.LandingDownload-blocwhite-third .LandingDownload-blocContainer ul li .LandingDownload-listTestimonials-avatar {
+  width: 100px;
+  height: 100px;
+  top: -48px;
+  left: calc(50% - 50px);
+}
+
+.LandingDownload-blocblue-third img {
+  position: absolute;
+  right: 5%;
+  top: 149px;
+}
+.LandingDownload-blocblue-third .LandingDownload-blocContainer h2 {
+  padding: 0 20px;
+  max-width: 100%;
+}
+.LandingDownload-blocblue-third .LandingDownload-blocContainer .LandingDownload-blocContainer-flexSeparatedcols {
+  width: 100%;
+  align-items: flex-start;
+  justify-content: left;
+  font-size: 25px;
+  padding: 0 20px;
+  line-height: initial;
+}
+.LandingDownload-blocblue-third .LandingDownload-blocContainer .LandingDownload-blocContainer-flexSeparatedcols img {
+  position: relative;
+  right: inherit;
+  top: inherit;
+}
+.LandingDownload-blocblue-third .LandingDownload-blocContainer .LandingDownload-blocContainer-flexSeparatedcols-separator {
+  border-left: 1px solid #000;
+  height: 112px;
+  margin: 0 40px;
+}
+
+.LandingDownload-blocwhite-last .LandingDownload-blocContainer {
+  width: 100% !important;
+  max-width: none;
+  z-index: 4;
+}
+.LandingDownload-blocwhite-last .LandingDownload-blocContainer h2 {
+  max-width: 100%;
+}
+.LandingDownload-blocwhite-last .LandingDownload-blocContainer h2 span {
+  color: #19465f;
+}
+.LandingDownload-blocwhite-last .LandingDownload-blocContainer .LandingDownload-listButtons {
+  margin: 10vh auto;
+  background-image: url("../landing_page_files/bloc-analystes2.png");
+}
+.LandingDownload-blocwhite-last .LandingDownload-blocContainer .LandingDownload-listButtons li a::after {
+  background-image: url("../landing_page_files/arrow_right.png");
+}
+
+.bloc_newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .bloc_newsletter {
+    flex-direction: column;
+  }
+}
+.bloc_newsletter h3 {
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .bloc_newsletter h3 {
+    margin-right: 0;
+  }
+}
+.bloc_newsletter #form_newsletter {
+  border: 0;
+  max-width: 400px;
+}
+@media (max-width: 768px) {
+  .bloc_newsletter #form_newsletter {
+    height: 60px;
+  }
+}
+@media (max-width: 430px) {
+  .bloc_newsletter #form_newsletter {
+    height: 110px;
+  }
+}
+
+.footer {
+  padding-bottom: 0;
+}
+.footer .glyphicon {
+  float: right;
+}
+.footer .glyphicon i {
+  font-size: x-small;
+  border-radius: 30px;
+  background-color: #1F1F1F;
+  width: 30px;
+  height: 30px;
+  padding: 9px 11px;
+  margin: 15px;
+}
 
 /*# sourceMappingURL=landingpage.css.map */
