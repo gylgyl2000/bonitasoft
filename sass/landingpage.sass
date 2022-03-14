@@ -43,7 +43,60 @@ div[role="main"].region.region-content
                     background-image: url("../landing_page_files/download-white.svg") 
                 &:hover 
                     &:before
-                        background-image: url("../landing_page_files/download-red.svg") 
+                        background-image: url("../landing_page_files/download-red.svg")
+        li.dropdown
+            .dropdown-menu.two-cols
+                padding: 0 10px
+            .dropdown-menu.two-cols >
+                li
+                    min-width: 250px
+                    padding: 1rem
+                li >
+                    a
+                        color: #428bca
+                        font-size: 18px
+                        padding: 0
+                        background-color: transparent
+                        &::after
+                            content: ''
+                            background-color: #ddd
+                            width: 100%
+                            height: 1px
+                            margin-top: 0.5rem
+                            margin-bottom: 1rem
+                            display: block
+                    ul >
+                        li >
+                            a
+                                font-size: 16px
+                                white-space: nowrap
+            &:hover >
+                .dropdown-menu.two-cols
+                    display: flex
+
+ul.simple,
+ol.simple
+  margin-left: 0
+  padding: 0
+  list-style: none
+
+[class*="cl-"],
+[class*="cc-"],
+[class*="mg-"],
+[class*="pg-"],
+[class*="bd-"],
+[class*="rd-"],
+[class*="sh-"],
+[class*="tx-"],
+[class*="tx-sh-"],
+[class*="tx-sh-r-"]
+    transition: all 0.2s ease-in-out
+
+.cl-grey_7
+    color: #404040 !important
+
+a.cl-grey_7:hover
+    color: #C62828 !important
 
 .region-content
     .col-sm-12
@@ -199,7 +252,7 @@ div[role="main"].region.region-content
         ul
             padding-bottom: 8vh
             li
-                margin-bottom: 8vh
+                margin-bottom: 8vh !important
                 padding-top: 75px
                 width: calc(100% / 3 - 40px)
                 margin: 10px
